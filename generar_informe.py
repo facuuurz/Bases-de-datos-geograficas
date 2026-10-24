@@ -18,7 +18,7 @@ HTML_OUT = os.path.join(BASE, "TP2_LaPaz_informe.html")
 PDF_OUT = os.path.join(BASE, "TP2_LaPaz_informe.pdf")
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
 
-INTEGRANTES = ["Mariano Gervasoni"]
+INTEGRANTES = ["Facundo Tomas Hernandes", "Maria Victorina Cabrera", "Facundo Thomas Ramirez", "Mariano Gervasoni"]
 
 con = psycopg2.connect(host="localhost", dbname="tp2_bdg", user="postgres", password="1234")
 con.autocommit = True
