@@ -1,0 +1,30 @@
+psql:01_construccion.sql:35: NOTICE:  la extensión «postgis» ya existe, omitiendo
+CREATE EXTENSION
+psql:01_construccion.sql:36: NOTICE:  el esquema «entrerios» ya existe, omitiendo
+CREATE SCHEMA
+SET
+psql:01_construccion.sql:41: NOTICE:  eliminando además restricción «zona_riesgo_hidrico_id_depto_fkey» en tabla zona_riesgo_hidrico
+DROP TABLE
+CREATE TABLE
+INSERT 0 17
+SELECT 1
+CREATE TABLE
+INSERT 0 162
+ALTER TABLE
+UPDATE 162
+DELETE 1
+CREATE TABLE
+INSERT 0 3977
+CREATE TABLE
+INSERT 0 8670
+CREATE TABLE
+CREATE TABLE
+INSERT 0 3481
+INSERT 0 190
+DELETE 0
+CREATE TABLE
+INSERT 0 35785
+CREATE TABLE
+INSERT 0 204
+DO
+CREATE INDEX

@@ -1,0 +1,98 @@
+SET
+CREATE FUNCTION
+    localidad    | departamento |   osm_id   |  elemento_cercano   |  tipo_elemento  | distancia_m | riesgo 
+-----------------+--------------+------------+---------------------+-----------------+-------------+--------
+ El Quebracho    | La Paz       | 9328799471 | (sin nombre)        | stream          |         147 | Alto
+ La Paz          | La Paz       | 198457357  | Arroyo Cabayú Cutiá | stream          |         532 | Alto
+ Piedras Blancas | La Paz       | 198410495  | (sin nombre)        | stream          |         535 | Alto
+ Colonia Avigdor | La Paz       | 198444786  | (sin nombre)        | laguna/pond     |         585 | Alto
+ Santa Elena     | La Paz       | 198423850  | (sin nombre)        | cauce/river     |         655 | Alto
+ San Gustavo     | La Paz       | 198420451  | (sin nombre)        | stream          |         806 | Alto
+ Bovril          | La Paz       | 4726968959 | (sin nombre)        | laguna/sin_tipo |         888 | Alto
+ Alcaraz         | La Paz       | 198438125  | (sin nombre)        | laguna/pond     |         939 | Alto
+ Sir Leonard     | La Paz       | 2215247225 | Arroyo Macieguitas  | river           |        2870 | Medio
+(9 filas)
+
+ localidad | departamento |  osm_id   | elemento_cercano | tipo_elemento | distancia_m | riesgo 
+-----------+--------------+-----------+------------------+---------------+-------------+--------
+ Paraná    | Paraná       | 198409278 | La Santiagueña   | stream        |        1000 | Alto
+(1 fila)
+
+ localidad | departamento |  osm_id   | elemento_cercano | tipo_elemento | distancia_m | riesgo 
+-----------+--------------+-----------+------------------+---------------+-------------+--------
+ Concordia | Concordia    | 198445828 | Arroyo Concordia | stream        |         500 | Alto
+(1 fila)
+
+ localidad | departamento |  osm_id   | elemento_cercano | tipo_elemento | distancia_m | riesgo 
+-----------+--------------+-----------+------------------+---------------+-------------+--------
+ Villaguay | Villaguay    | 198434570 | Arroyo Villaguay | river         |        1243 | Medio
+(1 fila)
+
+ localidad | departamento | osm_id | elemento_cercano | tipo_elemento | distancia_m | riesgo 
+-----------+--------------+--------+------------------+---------------+-------------+--------
+(0 filas)
+
+ riesgo | localidades 
+--------+-------------
+ Alto   |         115
+ Bajo   |           2
+ Medio  |          42
+(3 filas)
+
+DROP TABLE
+SELECT 1
+                                                                                                    mbr_wkt                                                                                                    | mbr_km2 | provincia_km2 | mbr_5347_km2 | pct_ocupado | relacion 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------------+--------------+-------------+----------
+ POLYGON((-60.776184081999986 -34.03977485199994,-60.776184081999986 -30.158970737999937,-57.79739717099994 -30.158970737999937,-57.79739717099994 -34.03977485199994,-60.776184081999986 -34.03977485199994)) |  120979 |         78394 |       122196 |        64.8 |     1.54
+(1 fila)
+
+CREATE FUNCTION
+      caso       |                          establecimiento                           |  tipo  | departamento | distancia_m | distancia_km 
+-----------------+--------------------------------------------------------------------+--------+--------------+-------------+--------------
+ Plaza de La Paz | Centro De Dialisis Instituto De Nefrologia De Entre Rios Siglo XXI | clinic | La Paz       |          95 |         0.09
+(1 fila)
+
+             caso             |      establecimiento       |   tipo   | departamento | distancia_m | distancia_km 
+------------------------------+----------------------------+----------+--------------+-------------+--------------
+ Campo entre Bovril y Alcaraz | Hospital Crispin Velázquez | hospital | Federal      |       17227 |        17.23
+(1 fila)
+
+             caso              |     establecimiento     |   tipo   | departamento | distancia_m | distancia_km 
+-------------------------------+-------------------------+----------+--------------+-------------+--------------
+ Norte del depto (Guayquiraró) | Hospital Gregoria Perez | hospital | La Paz       |       31785 |        31.79
+(1 fila)
+
+             caso             |     establecimiento     |   tipo   | departamento | distancia_m | distancia_km 
+------------------------------+-------------------------+----------+--------------+-------------+--------------
+ Mismo punto, solo hospitales | Hospital Gregoria Perez | hospital | La Paz       |       31785 |        31.79
+(1 fila)
+
+DROP TABLE
+SELECT 15
+SELECT 3
+ grupo |                               nombre                               |   tipo   
+-------+--------------------------------------------------------------------+----------
+     1 | Clínica Bovril                                                     | clinic
+     1 | Clínica del Sol                                                    | clinic
+     1 | Hospital Ecuador                                                   | hospital
+     1 | Hospital San Miguel                                                | hospital
+     2 | Alianza Médica                                                     | hospital
+     2 | Centro De Dialisis Instituto De Nefrologia De Entre Rios Siglo XXI | clinic
+     2 | Consultorio Medico Centro Medico Lawrie                            | clinic
+     2 | Consultorio Medico Dm Diagnostico Medico                           | clinic
+     2 | Hospital Gregoria Perez                                            | hospital
+     2 | Hospital Zonal 9 de Julio                                          | hospital
+     2 | Mayo                                                               | clinic
+     3 | Centro de Salud                                                    | clinic
+     3 | Centro de Salud                                                    | hospital
+     3 | Centro de Salud Materno Infantil                                   | clinic
+     3 | Hospital Santa Elena                                               | hospital
+(15 filas)
+
+ grupo | establecimientos |    lat    |    lon    | localidad_cercana | dist_localidad_m | ruta_cercana | dist_ruta_m |                                                                                                              integrantes                                                                                                              
+-------+------------------+-----------+-----------+-------------------+------------------+--------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     1 |                4 | -31.37082 | -59.48338 | Sir Leonard       |             2638 | RN127        |        4567 | Clínica Bovril | Clínica del Sol | Hospital Ecuador | Hospital San Miguel
+     2 |                7 | -30.73395 | -59.60679 | La Paz            |             3675 | RPA01        |         763 | Alianza Médica | Centro De Dialisis Instituto De Nefrologia De Entre Rios Siglo XXI | Consultorio Medico Centro Medico Lawrie | Consultorio Medico Dm Diagnostico Medico | Hospital Gregoria Perez | Hospital Zonal 9 de Julio | Mayo
+     3 |                4 | -31.01369 | -59.79800 | Santa Elena       |             7682 | RPA02        |        6479 | Centro de Salud | Centro de Salud | Centro de Salud Materno Infantil | Hospital Santa Elena
+(3 filas)
+

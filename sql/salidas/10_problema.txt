@@ -1,0 +1,52 @@
+SET
+DROP TABLE
+SELECT 4310
+CREATE INDEX
+psql:10_problema.sql:58: NOTICE:  la tabla «tmp_restriccion» no existe, omitiendo
+DROP TABLE
+SELECT 1
+DROP TABLE
+SELECT 787
+ celdas_totales | celdas_aptas 
+----------------+--------------
+           4310 |          787
+(1 fila)
+
+psql:10_problema.sql:102: NOTICE:  la tabla «tmp_vsitio» no existe, omitiendo
+psql:10_problema.sql:102: NOTICE:  la tabla «tmp_vloc» no existe, omitiendo
+psql:10_problema.sql:102: NOTICE:  la tabla «tmp_tiempos» no existe, omitiendo
+DROP TABLE
+SELECT 787
+SELECT 9
+SELECT 3680
+DROP TABLE
+SELECT 727
+DROP TABLE
+CREATE TABLE
+DO
+ ranking | puntaje |    lat    |    lon    |  localidad_ref  | dist_localidad_m | ruta  | dist_ruta_m | libre_km2 | pct_zrh_completa | beneficio_hab_min | loc_45min |                            localidades_45min                             
+---------+---------+-----------+-----------+-----------------+------------------+-------+-------------+-----------+------------------+-------------------+-----------+--------------------------------------------------------------------------
+       1 |  0.8266 | -31.15767 | -59.33795 | Colonia Avigdor |             7268 | RP6   |           0 |     1.461 |              0.0 |             15088 |         2 | Colonia Avigdor 14 min, Bovril 40 min
+       2 |  0.5669 | -31.05826 | -59.37400 | Colonia Avigdor |            14337 | RP6   |           0 |     1.461 |              2.0 |              6009 |         2 | Colonia Avigdor 27 min, El Quebracho 42 min
+       3 |  0.5257 | -30.97740 | -59.69250 | El Quebracho    |             2865 | RPA02 |           0 |     1.461 |              0.0 |               910 |         4 | El Quebracho 2 min, Santa Elena 8 min, La Paz 29 min, San Gustavo 42 min
+(3 filas)
+
+    localidad    | poblacion | min_actual | min_al_case | min_con_case | ahorro_min 
+-----------------+-----------+------------+-------------+--------------+------------
+ Colonia Avigdor |       692 |       36.0 |        14.2 |         14.2 |       21.8
+ Santa Elena     |      5000 |        1.2 |        65.3 |          1.2 |        0.0
+ Alcaraz         |      2578 |        2.2 |       120.8 |          2.2 |        0.0
+ La Paz          |     24716 |        0.6 |        61.2 |          0.6 |        0.0
+ Sir Leonard     |       281 |       21.8 |       124.5 |         21.8 |        0.0
+ Bovril          |      8790 |        0.8 |        39.6 |          0.8 |        0.0
+ San Gustavo     |      2000 |        1.6 |        74.6 |          1.6 |        0.0
+ El Quebracho    |       100 |       11.5 |        54.9 |         11.5 |        0.0
+(8 filas)
+
+ ranking |      establecimiento       |   tipo   | departamento | distancia_m | distancia_km 
+---------+----------------------------+----------+--------------+-------------+--------------
+       1 | Hospital Crispin Velázquez | hospital | Federal      |       14527 |        14.53
+       2 | Hospital Crispin Velázquez | hospital | Federal      |       24910 |        24.91
+       3 | Hospital Santa Elena       | hospital | La Paz       |       10336 |        10.34
+(3 filas)
+

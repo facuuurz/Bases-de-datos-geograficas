@@ -1,0 +1,143 @@
+SET
+ jurisdiccion |  ref  | categoria_osm |                   nombres                    
+--------------+-------+---------------+----------------------------------------------
+ Nacional     | RN12  | trunk         | Ruta Nacional 12
+ Nacional     | RN127 | primary       | Ruta Nacional 127
+ Provincial   | RP1   | primary       | Ruta Provincial 1
+ Provincial   | RP6   | secondary     | Ruta Provincial 6
+ Provincial   | RPA01 | primary       | Avenida Hermanos Kennedy / Ruta Provincial 1
+ Provincial   | RPA02 | primary       | Avenida Presidente Perón
+ Provincial   | RPA03 | secondary     | 
+(7 filas)
+
+DROP TABLE
+SELECT 8
+    ref    | jurisdiccion | categoria_osm |   km   
+-----------+--------------+---------------+--------
+ RN12      | Nacional     | trunk         | 128.37
+ RP1       | Provincial   | primary       |  58.16
+ RP6       | Provincial   | secondary     |  55.40
+ (sin ref) | Sin dato     | secondary     |  30.65
+ RN127     | Nacional     | primary       |  17.92
+ RPA03     | Provincial   | secondary     |  16.70
+ RPA02     | Provincial   | primary       |  13.42
+ RPA01     | Provincial   | primary       |   3.79
+(8 filas)
+
+ jurisdiccion |  km   
+--------------+-------
+ Nacional     | 146.3
+ Provincial   | 147.5
+ Sin dato     |  30.7
+              | 324.4
+(4 filas)
+
+DROP TABLE
+SELECT 15
+                               nombre                               |   tipo   |    localidad    | dist_localidad_m 
+--------------------------------------------------------------------+----------+-----------------+------------------
+ Hospital Ecuador                                                   | hospital | Alcaraz         |              548
+ Clínica Bovril                                                     | clinic   | Bovril          |              227
+ Clínica del Sol                                                    | clinic   | Bovril          |              254
+ Hospital San Miguel                                                | hospital | Bovril          |              473
+ Centro de Salud                                                    | clinic   | El Quebracho    |               87
+ Centro De Dialisis Instituto De Nefrologia De Entre Rios Siglo XXI | clinic   | La Paz          |              183
+ Consultorio Medico Centro Medico Lawrie                            | clinic   | La Paz          |               81
+ Consultorio Medico Dm Diagnostico Medico                           | clinic   | La Paz          |               91
+ Mayo                                                               | clinic   | La Paz          |              103
+ Alianza Médica                                                     | hospital | La Paz          |              264
+ Hospital Zonal 9 de Julio                                          | hospital | La Paz          |             1517
+ Centro de Salud                                                    | hospital | Piedras Blancas |              402
+ Hospital Gregoria Perez                                            | hospital | San Gustavo     |              833
+ Centro de Salud Materno Infantil                                   | clinic   | Santa Elena     |              275
+ Hospital Santa Elena                                               | hospital | Santa Elena     |              494
+(15 filas)
+
+    localidad    | establecimientos | hospitales | clinicas 
+-----------------+------------------+------------+----------
+ La Paz          |                6 |          2 |        4
+ Bovril          |                3 |          1 |        2
+ Santa Elena     |                2 |          1 |        1
+ Alcaraz         |                1 |          1 |        0
+ San Gustavo     |                1 |          1 |        0
+ Piedras Blancas |                1 |          1 |        0
+ El Quebracho    |                1 |          0 |        1
+(7 filas)
+
+ min_m | mediana_m | max_m 
+-------+-----------+-------
+    19 |       400 | 22613
+(1 fila)
+
+      nombre      | establecimientos | c10000km2 
+------------------+------------------+-----------
+ Paraná           |               54 |     105.8
+ Diamante         |               14 |      52.1
+ Concordia        |               15 |      45.5
+ Uruguay          |               23 |      44.8
+ Colón            |               10 |      36.2
+ Tala             |                7 |      26.5
+ La Paz           |               15 |      22.6
+ San Salvador     |                3 |      22.5
+ Federación       |                8 |      21.3
+ Gualeguaychú     |               16 |      21.2
+ Victoria         |               10 |      15.1
+ Nogoyá           |                6 |      13.7
+ Feliciano        |                3 |       9.4
+ Villaguay        |                6 |       9.1
+ Gualeguay        |                6 |       9.1
+ Islas del Ibicuy |                4 |       8.0
+ Federal          |                4 |       7.7
+(17 filas)
+
+DROP TABLE
+SELECT 9
+ ranking_lejania |     nombre      |  tipo   | poblacion |            salud_mas_cercana            | tipo_salud | distancia_m 
+-----------------+-----------------+---------+-----------+-----------------------------------------+------------+-------------
+               1 | Colonia Avigdor | village |       692 | Clínica del Sol                         | clinic     |       17922
+               2 | Sir Leonard     | village |       281 | Hospital San Miguel                     | hospital   |        7226
+               3 | San Gustavo     | village |      2000 | Hospital Gregoria Perez                 | hospital   |         833
+               4 | Alcaraz         | village |      2578 | Hospital Ecuador                        | hospital   |         548
+               5 | Piedras Blancas | village |      1767 | Centro de Salud                         | hospital   |         402
+               6 | Santa Elena     | village |      5000 | Centro de Salud Materno Infantil        | clinic     |         275
+               7 | Bovril          | village |      8790 | Clínica Bovril                          | clinic     |         227
+               8 | El Quebracho    | village |           | Centro de Salud                         | clinic     |          87
+               9 | La Paz          | town    |     24716 | Consultorio Medico Centro Medico Lawrie | clinic     |          81
+(9 filas)
+
+     nombre      |  hospital_mas_cercano   | distancia_m 
+-----------------+-------------------------+-------------
+ Colonia Avigdor | Hospital San Miguel     |       18235
+ El Quebracho    | Hospital Santa Elena    |       13171
+ Sir Leonard     | Hospital San Miguel     |        7226
+ San Gustavo     | Hospital Gregoria Perez |         833
+ Alcaraz         | Hospital Ecuador        |         548
+ Santa Elena     | Hospital Santa Elena    |         494
+ Bovril          | Hospital San Miguel     |         473
+ Piedras Blancas | Centro de Salud         |         402
+ La Paz          | Alianza Médica          |         264
+(9 filas)
+
+DROP TABLE
+SELECT 1
+ALTER TABLE
+ALTER TABLE
+UPDATE 1
+DROP TABLE
+SELECT 2
+ localidades_depto | fuera_de_cobertura 
+-------------------+--------------------
+                 9 |                  2
+(1 fila)
+
+     nombre      |  tipo   | poblacion | distancia_m 
+-----------------+---------+-----------+-------------
+ Colonia Avigdor | village |       692 |       17922
+ Sir Leonard     | village |       281 |        7226
+(2 filas)
+
+ pct_territorio_cubierto 
+-------------------------
+                     7.6
+(1 fila)
+
