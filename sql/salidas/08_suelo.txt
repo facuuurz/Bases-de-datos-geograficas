@@ -1,0 +1,91 @@
+SET
+DROP TABLE
+CREATE TABLE
+INSERT 0 4508
+DELETE 0
+CREATE INDEX
+CREATE INDEX
+ANALYZE
+ registros |      tipo       | srid | invalidas 
+-----------+-----------------+------+-----------
+      4508 | ST_MultiPolygon | 4326 |         0
+(1 fila)
+
+DROP TABLE
+SELECT 541
+DELETE 0
+ALTER TABLE
+UPDATE 541
+CREATE INDEX
+           clase           |  km2   | pct_depto 
+---------------------------+--------+-----------
+ Agrícola                  | 1317.8 |      19.8
+ Agrícola-ganadera         | 2192.4 |      33.0
+ Ganadera                  | 2521.1 |      38.0
+ Misceláneas               |    3.0 |       0.0
+ Planicie inundable / agua |  553.6 |       8.3
+ Urbana                    |   17.1 |       0.3
+                           | 6605.1 |      99.4
+(7 filas)
+
+ pct_agricola_ipc30 | pct_otros_ipc30 | pct_agricola_si_umbral_20 | pct_agricola_si_umbral_40 
+--------------------+-----------------+---------------------------+---------------------------
+               20.0 |            80.0 |                      53.1 |                      11.5
+(1 fila)
+
+         unidad          |  suelo_dominante   | ipc |  km2  
+-------------------------+--------------------+-----+-------
+ Tacuaras                | Argiudol ácuico    |  62 | 300.1
+ Alcaráz                 | Argiudol vértico   |  31 | 231.8
+ Banderas                | Argiudol vértico   |  46 | 125.8
+ Colonia Once            | Argiudol vértico   |  31 | 122.4
+ Malambo                 | Argiudol ácuico    |  45 | 121.4
+ Asociación Tacuaras III | Argiudol ácuico    |  46 |  80.2
+ Puerto Algarrobo        | Udifluvente ácuico |  38 |  78.3
+ Arroyo Carrasco         | Argiudol vértico   |  33 |  64.4
+ Asociación Tacuaras IV  | Argiudol ácuico    |  43 |  50.6
+ Asociación Tacuaras II  | Argiudol ácuico    |  52 |  42.2
+(10 filas)
+
+DROP TABLE
+SELECT 127
+DELETE 0
+ALTER TABLE
+UPDATE 127
+ agricola_expuesta_km2 | agricola_total_km2 | pct_expuesta 
+-----------------------+--------------------+--------------
+                 905.7 |             1317.8 |         68.7
+(1 fila)
+
+ pct_expuesta_zrh_principal 
+----------------------------
+                       52.7
+(1 fila)
+
+         unidad          | ipc | km2_expuestos 
+-------------------------+-----+---------------
+ Tacuaras                |  62 |         214.7
+ Malambo                 |  45 |         118.6
+ Banderas                |  46 |         115.1
+ Colonia Once            |  31 |         105.5
+ Alcaráz                 |  31 |         105.5
+ Puerto Algarrobo        |  38 |          74.8
+ Arroyo Carrasco         |  33 |          41.0
+ Asociación Tacuaras II  |  52 |          33.7
+ Asociación Tacuaras III |  46 |          31.0
+ Asociación Tacuaras IV  |  43 |          28.9
+(10 filas)
+
+DROP TABLE
+SELECT 7
+  ref  | jurisdiccion | km_ruta | km_en_agricola | pct_en_agricola | sup_agricola_corredor_2km_km2 
+-------+--------------+---------+----------------+-----------------+-------------------------------
+ RN12  | Nacional     |  128.37 |           40.3 |            31.4 |                         151.5
+ RPA02 | Provincial   |   13.42 |            4.2 |            31.1 |                          16.3
+ RP6   | Provincial   |   55.40 |            3.3 |             6.0 |                          14.3
+ RPA01 | Provincial   |    3.79 |            2.4 |            64.4 |                          11.2
+ RPA03 | Provincial   |   16.70 |            1.8 |            10.7 |                          15.8
+ RP1   | Provincial   |   58.16 |            0.0 |             0.0 |                           4.5
+ RN127 | Nacional     |   17.92 |            0.0 |             0.0 |                           2.3
+(7 filas)
+

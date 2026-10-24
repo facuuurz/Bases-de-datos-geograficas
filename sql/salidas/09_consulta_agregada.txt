@@ -1,0 +1,140 @@
+SET
+psql:09_consulta_agregada.sql:34: NOTICE:  la extensión «pgrouting» ya existe, omitiendo
+CREATE EXTENSION
+DROP TABLE
+SELECT 51391
+ALTER TABLE
+UPDATE 51391
+DROP TABLE
+SELECT 46437
+UPDATE 51391
+UPDATE 51391
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ANALYZE
+ANALYZE
+ aristas |  km  | vertices 
+---------+------+----------
+   51391 | 8762 |    46437
+(1 fila)
+
+ component | vertices 
+-----------+----------
+       324 |    40373
+         1 |     5770
+     19815 |       56
+     40759 |       53
+     32604 |       44
+(5 filas)
+
+UPDATE 51391
+UPDATE 407
+psql:09_consulta_agregada.sql:122: NOTICE:  la tabla «tmp_planicie» no existe, omitiendo
+DROP TABLE
+SELECT 180
+CREATE INDEX
+ANALYZE
+UPDATE 1422
+ aristas_cortadas | km_cortados | pct_red 
+------------------+-------------+---------
+             1829 |       339.3 |     3.9
+(1 fila)
+
+DROP TABLE
+SELECT 77
+         via          | metros 
+----------------------+--------
+ unclassified         | 202044
+ RN127                |  33551
+ RN12                 |  23634
+ residential          |  16857
+ tertiary             |  12388
+ RP8                  |   9247
+ RP10                 |   6711
+ RP32                 |   3832
+ Acceso a Sir Leonard |   3196
+ El Boyero            |   2591
+ Acceso a Bovril      |   2518
+ Los Naranjeros       |   2024
+ RPA03                |   1585
+ López Jordán         |   1581
+ Gregorio Heit        |   1403
+(15 filas)
+
+psql:09_consulta_agregada.sql:159: NOTICE:  la tabla «tmp_nodos» no existe, omitiendo
+DROP TABLE
+SELECT 24
+psql:09_consulta_agregada.sql:172: NOTICE:  la tabla «tmp_normal» no existe, omitiendo
+psql:09_consulta_agregada.sql:172: NOTICE:  la tabla «tmp_crecida» no existe, omitiendo
+DROP TABLE
+SELECT 135
+SELECT 106
+DROP TABLE
+SELECT 9
+ prioridad |    localidad    | poblacion |      hospital_normal       | min_normal |      hospital_crecida      | min_crecida | demora_extra_min |           situacion            
+-----------+-----------------+-----------+----------------------------+------------+----------------------------+-------------+------------------+--------------------------------
+         1 | Colonia Avigdor |       692 | Hospital Crispin Velázquez |       32.4 | Hospital Crispin Velázquez |        36.0 |              3.6 | Sin afectación relevante
+         2 | Sir Leonard     |       281 | Hospital San Miguel        |       13.5 | Hospital Ecuador           |        21.8 |              8.3 | Debe derivarse a otro hospital
+         3 | Santa Elena     |      5000 | Hospital Santa Elena       |        1.2 | Hospital Santa Elena       |         1.2 |              0.0 | Sin afectación relevante
+         3 | Alcaraz         |      2578 | Hospital Ecuador           |        2.2 | Hospital Ecuador           |         2.2 |              0.0 | Sin afectación relevante
+         3 | La Paz          |     24716 | Alianza Médica             |        0.6 | Alianza Médica             |         0.6 |              0.0 | Sin afectación relevante
+         3 | Bovril          |      8790 | Hospital San Miguel        |        0.8 | Hospital San Miguel        |         0.8 |              0.0 | Sin afectación relevante
+         3 | Piedras Blancas |      1767 | Centro de Salud            |        1.0 | Centro de Salud            |         1.0 |              0.0 | Sin afectación relevante
+         3 | El Quebracho    |         0 | Hospital Santa Elena       |       11.5 | Hospital Santa Elena       |        11.5 |              0.0 | Sin afectación relevante
+         3 | San Gustavo     |      2000 | Hospital Gregoria Perez    |        1.6 | Hospital Gregoria Perez    |         1.6 |              0.0 | Sin afectación relevante
+(9 filas)
+
+DROP TABLE
+CREATE TABLE
+DO
+  localidad  | escenario |      hospital       | minutos |  km  
+-------------+-----------+---------------------+---------+------
+ Sir Leonard | normal    | Hospital San Miguel |    13.3 |  9.6
+ Sir Leonard | crecida   | Hospital Ecuador    |    21.6 | 14.1
+(2 filas)
+
+psql:09_consulta_agregada.sql:260: NOTICE:  la tabla «tmp_zonal» no existe, omitiendo
+DROP TABLE
+SELECT 9
+psql:09_consulta_agregada.sql:267: NOTICE:  la tabla «tmp_zonal_h» no existe, omitiendo
+DROP TABLE
+SELECT 1
+DROP TABLE
+SELECT 9
+ prioridad |    localidad    | poblacion | min_normal | min_crecida | demora_extra_min | pct_extra |         situacion          
+-----------+-----------------+-----------+------------+-------------+------------------+-----------+----------------------------
+         1 | Piedras Blancas |      1767 |       73.5 |             |                  |           | AISLADA
+         2 | Alcaraz         |      2578 |       98.0 |       181.4 |             83.5 |        85 | Demora crítica (>= 15 min)
+         3 | Bovril          |      8790 |       92.8 |       101.1 |              8.3 |         9 | Demora moderada (5-15 min)
+         4 | Sir Leonard     |       281 |       93.3 |       185.1 |             91.8 |        98 | Demora crítica (>= 15 min)
+         5 | Santa Elena     |      5000 |       33.5 |        37.1 |              3.6 |        11 | Sin afectación relevante
+         6 | Colonia Avigdor |       692 |       68.6 |        75.8 |              7.1 |        10 | Demora moderada (5-15 min)
+         7 | La Paz          |     24716 |        2.9 |         2.9 |              0.0 |         0 | Sin afectación relevante
+         7 | San Gustavo     |      2000 |       21.1 |        21.1 |              0.0 |         0 | Sin afectación relevante
+         7 | El Quebracho    |         0 |       23.0 |        26.6 |              3.6 |        16 | Sin afectación relevante
+(9 filas)
+
+DELETE 0
+DO
+    localidad    | escenario | minutos |  km   
+-----------------+-----------+---------+-------
+ Alcaraz         | normal    |    97.9 | 104.5
+ Alcaraz         | crecida   |   181.4 | 159.6
+ Bovril          | normal    |    92.7 |  98.8
+ Bovril          | crecida   |   101.0 |  92.7
+ Colonia Avigdor | normal    |    68.5 |  72.1
+ Colonia Avigdor | crecida   |    75.7 |  75.8
+ Sir Leonard     | normal    |    93.2 |  89.9
+ Sir Leonard     | crecida   |   185.0 | 161.8
+(8 filas)
+
+     via      | metros 
+--------------+--------
+ unclassified | 202044
+ RN127        |  33551
+ RN12         |  23634
+ tertiary     |  12388
+(4 filas)
+

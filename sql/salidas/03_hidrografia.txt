@@ -1,0 +1,96 @@
+SET
+DROP TABLE
+SELECT 4
+  vecino   | touches | limite_km 
+-----------+---------+-----------
+ Federal   | f       |     175.5
+ Paraná    | t       |      92.6
+ Feliciano | f       |      70.4
+ Villaguay | t       |      33.3
+(4 filas)
+
+DROP TABLE
+SELECT 4
+      frontera      |        tipo        |  km   
+--------------------+--------------------+-------
+ La Paz - Federal   | ST_MultiLineString | 175.5
+ La Paz - Paraná    | ST_MultiLineString |  92.6
+ La Paz - Feliciano | ST_MultiLineString |  70.4
+ La Paz - Villaguay | ST_MultiLineString |  33.3
+(4 filas)
+
+DROP TABLE
+SELECT 17
+ ranking |      nombre      | cant_lagunas | sup_lagunas_km2 | sup_depto_km2 | lagunas_c100km2 
+---------+------------------+--------------+-----------------+---------------+-----------------
+       1 | Federación       |          594 |           40.24 |          3758 |           15.81
+       2 | Victoria         |          420 |          385.22 |          6618 |            6.35
+       3 | Nogoyá           |          381 |            4.25 |          4379 |            8.70
+       4 | Concordia        |          290 |            4.40 |          3295 |            8.80
+       5 | Uruguay          |          289 |            3.33 |          5129 |            5.63
+       6 | La Paz           |          256 |           35.24 |          6643 |            3.85
+       7 | Paraná           |          171 |            4.14 |          5105 |            3.35
+       8 | Tala             |          167 |            1.98 |          2645 |            6.31
+       9 | Gualeguaychú     |          166 |            4.45 |          7540 |            2.20
+      10 | Diamante         |          160 |           68.75 |          2689 |            5.95
+      11 | Colón            |          156 |            1.71 |          2765 |            5.64
+      12 | Gualeguay        |          140 |           47.38 |          6562 |            2.13
+      13 | Villaguay        |           72 |            2.64 |          6577 |            1.09
+      14 | San Salvador     |           67 |            0.41 |          1334 |            5.02
+      15 | Federal          |           64 |           13.56 |          5210 |            1.23
+      16 | Islas del Ibicuy |           57 |           10.74 |          4984 |            1.14
+      17 | Feliciano        |           31 |           25.99 |          3179 |            0.98
+(17 filas)
+
+   tipo    | cantidad |  km2   | con_nombre 
+-----------+----------+--------+------------
+ sin_tipo  |      232 | 34.227 |          1
+ pond      |       20 |  0.435 |          0
+ reservoir |        2 |  0.003 |          0
+ lake      |        1 |  0.554 |          1
+ oxbow     |        1 |  0.020 |          0
+(5 filas)
+
+DROP TABLE
+SELECT 1
+ sup_total_km2 | sup_lagunas_km2 | sup_restante_km2 | pct_lagunas | sup_agua_con_cauces_km2 | pct_agua_con_cauces 
+---------------+-----------------+------------------+-------------+-------------------------+---------------------
+       6643.10 |           35.24 |          6607.86 |       0.530 |                  178.74 |               2.691
+(1 fila)
+
+DROP TABLE
+SELECT 36
+       nombre        |     tipo     | tramos | longitud_m 
+---------------------+--------------+--------+------------
+ (sin nombre)        | river/stream |    450 |     852078
+ Arroyo Feliciano    | river        |     19 |     157749
+ Arroyo Estacas      | river        |     10 |      74635
+ Arroyo Alcaraz      | river        |     10 |      71136
+ Arroyo Don Gonzalo  | river/stream |      7 |      66317
+ Río Paraná          | river        |     12 |      63025
+ Riacho Espinillo    | river        |      4 |      50153
+ Río Guayquiraró     | river        |      5 |      38034
+ Arroyo Ombucito     | river        |      8 |      34092
+ Arroyo del Yeso     | river        |      6 |      31111
+ Arroyo Hondo        | river/stream |     10 |      26828
+ Arroyo Hernandarias | river        |      6 |      25953
+ Arroyo de las Mulas | stream       |      6 |      20431
+ Arroyo Fray Diego   | stream       |      9 |      19829
+ Arroyo del Yacaré   | river        |      3 |      18309
+ Arroyo Chañar       | river        |      4 |      17675
+ Arroyo Cabayú Cutiá | stream       |      5 |      15585
+ Río Sauce           | stream       |      1 |      14914
+ Arroyo Ceibo        | river        |      5 |      14377
+ Arroyo Los Pozos    | stream       |      2 |      11665
+ Arroyo Sauce        | stream       |      5 |      10706
+ Arroyo Curupi       | river        |      1 |       9514
+ Arroyo El Guacho    | stream       |      1 |       6499
+ Arroyo Las Cañas    | river        |      1 |       5452
+ Arroyo Macieguitas  | river        |      4 |       4254
+(25 filas)
+
+ cursos_con_nombre | long_rios_m | longitud_total_m 
+-------------------+-------------+------------------
+                35 |     1570680 |          1683363
+(1 fila)
+

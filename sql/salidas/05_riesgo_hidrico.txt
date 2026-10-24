@@ -1,0 +1,116 @@
+SET
+psql:05_riesgo_hidrico.sql:24: NOTICE:  eliminando además vista v_zrh_lapaz
+DROP TABLE
+CREATE TABLE
+INSERT 0 17
+UPDATE 17
+CREATE INDEX
+CREATE INDEX
+CREATE VIEW
+ depto  | zrh_km2 | pct_depto | zrh_principal_km2 | pct_principal 
+--------+---------+-----------+-------------------+---------------
+ La Paz |  4080.2 |      61.4 |            2715.0 |          40.9
+(1 fila)
+
+DROP TABLE
+SELECT 15
+ total_salud | expuestos 
+-------------+-----------
+          15 |        15
+(1 fila)
+
+                               nombre                               |   tipo   |    agua_cercana     | dist_agua_m 
+--------------------------------------------------------------------+----------+---------------------+-------------
+ Centro de Salud                                                    | clinic   | (curso sin nombre)  |         121
+ Hospital Santa Elena                                               | hospital | (cauce sin nombre)  |         204
+ Alianza Médica                                                     | hospital | Arroyo Cabayú Cutiá |         327
+ Hospital Gregoria Perez                                            | hospital | (curso sin nombre)  |         350
+ Mayo                                                               | clinic   | Arroyo Cabayú Cutiá |         445
+ Consultorio Medico Dm Diagnostico Medico                           | clinic   | Arroyo Cabayú Cutiá |         464
+ Centro De Dialisis Instituto De Nefrologia De Entre Rios Siglo XXI | clinic   | (cauce sin nombre)  |         483
+ Consultorio Medico Centro Medico Lawrie                            | clinic   | Arroyo Cabayú Cutiá |         491
+ Hospital San Miguel                                                | hospital | (laguna sin nombre) |         631
+ Hospital Zonal 9 de Julio                                          | hospital | Arroyo Los Paraísos |         633
+ Centro de Salud                                                    | hospital | (curso sin nombre)  |         674
+ Clínica del Sol                                                    | clinic   | (laguna sin nombre) |         703
+ Centro de Salud Materno Infantil                                   | clinic   | (curso sin nombre)  |         777
+ Hospital Ecuador                                                   | hospital | (laguna sin nombre) |         803
+ Clínica Bovril                                                     | clinic   | (laguna sin nombre) |         810
+(15 filas)
+
+DROP TABLE
+SELECT 9
+DROP TABLE
+SELECT 9
+    localidad    | poblacion | ruta_mas_cercana | dist_ruta_m | cruces_agua |             cursos_cruzados              | localidad_en_zrh | pct_vias_entorno_en_zrh | riesgo_aislamiento 
+-----------------+-----------+------------------+-------------+-------------+------------------------------------------+------------------+-------------------------+--------------------
+ La Paz          |     24716 | RPA01            |        2407 |           2 | Arroyo Cabayú Cutiá, Arroyo Los Paraísos | t                |                   100.0 | ALTO
+ Piedras Blancas |      1767 | RP8              |        6211 |           2 | Arroyo Hernandarias, s/n                 | t                |                    94.8 | ALTO
+ Colonia Avigdor |       692 | RP6              |        7358 |           3 | s/n                                      | t                |                    91.8 | ALTO
+ Sir Leonard     |       281 | RN127            |        3870 |           1 | Arroyo Macieguitas                       | f                |                    54.3 | ALTO
+ Santa Elena     |      5000 | RPA02            |         954 |           0 |                                          | t                |                   100.0 | MEDIO
+ San Gustavo     |      2000 | RP1              |        2768 |           0 |                                          | t                |                    92.4 | MEDIO
+ Bovril          |      8790 | RN127            |        5517 |           0 |                                          | t                |                    84.2 | MEDIO
+ El Quebracho    |           | RPA02            |          59 |           0 |                                          | t                |                    79.6 | MEDIO
+ Alcaraz         |      2578 | RN127            |        2791 |           0 |                                          | t                |                    63.6 | MEDIO
+(9 filas)
+
+DROP TABLE
+SELECT 83
+ ruta  | cruces | con_puente | sin_puente_registrado 
+-------+--------+------------+-----------------------
+ RN12  |     44 |         15 |                    29
+ RN127 |     23 |          8 |                    15
+ RP1   |      6 |          6 |                     0
+ RPA03 |      4 |          0 |                     4
+ RP6   |      3 |          3 |                     0
+       |      2 |          1 |                     1
+ RPA02 |      1 |          1 |                     0
+(7 filas)
+
+ ruta  |        curso        |  tipo  | puente_osm 
+-------+---------------------+--------+------------
+ RN12  | Arroyo Alcaraz      | river  | t
+ RN12  | Arroyo Arenal       | stream | t
+ RN12  | Arroyo Ceibo        | river  | t
+ RN12  | Arroyo Curupi       | river  | t
+ RN12  | Arroyo del Yacaré   | river  | t
+ RN12  | Arroyo Feliciano    | river  | t
+ RN12  | Arroyo Hernandarias | river  | t
+ RN12  | Arroyo Hondo        | stream | t
+ RN12  | Arroyo Los Pozos    | stream | t
+ RN12  | Arroyo Tala         | river  | f
+ RN12  | Arroyo Tala         | river  | f
+ RN12  | Río Guayquiraró     | river  | t
+ RN12  | Río Sauce           | stream | t
+ RN127 | Arroyo Macieguitas  | river  | t
+ RN127 | Arroyo Macieguitas  | river  | t
+ RN127 | Arroyo Macieguitas  | river  | t
+ RN127 | Arroyo Macieguitas  | river  | t
+ RP6   | Arroyo Don Gonzalo  | stream | t
+ RP6   | Arroyo Feliciano    | river  | t
+(19 filas)
+
+DROP TABLE
+SELECT 17
+ ranking |      nombre      | sup_km2 | pct_agua | pct_zrh | supera_30 | pct_zrh_principal | supera_30_principal 
+---------+------------------+---------+----------+---------+-----------+-------------------+---------------------
+       1 | Diamante         |    2689 |     5.95 |    98.7 | t         |              76.5 | t
+       2 | Victoria         |    6618 |     8.63 |    92.8 | t         |              84.4 | t
+       3 | Federación       |    3758 |     1.07 |    88.1 | t         |              80.8 | t
+       4 | Colón            |    2765 |     0.13 |    85.6 | t         |              65.6 | t
+       5 | Nogoyá           |    4379 |     0.10 |    85.4 | t         |              67.7 | t
+       6 | Concordia        |    3295 |     0.16 |    84.8 | t         |              71.5 | t
+       7 | San Salvador     |    1334 |     0.03 |    83.8 | t         |              50.6 | t
+       8 | Tala             |    2645 |     0.08 |    83.2 | t         |              70.8 | t
+       9 | Uruguay          |    5129 |     0.12 |    77.2 | t         |              53.6 | t
+      10 | Paraná           |    5105 |     2.29 |    76.4 | t         |              55.4 | t
+      11 | Gualeguay        |    6562 |     3.76 |    69.5 | t         |              61.4 | t
+      12 | Gualeguaychú     |    7540 |     0.17 |    67.5 | t         |              48.7 | t
+      13 | Islas del Ibicuy |    4984 |     2.53 |    61.6 | t         |              59.6 | t
+      14 | La Paz           |    6643 |     2.69 |    61.4 | t         |              40.9 | t
+      15 | Villaguay        |    6577 |     0.04 |    59.3 | t         |              42.6 | t
+      16 | Federal          |    5210 |     0.26 |    56.7 | t         |              35.6 | t
+      17 | Feliciano        |    3179 |     0.82 |    51.1 | t         |              29.5 | f
+(17 filas)
+

@@ -1,0 +1,136 @@
+SET
+CREATE FUNCTION
+            tabla             | columna | tipo_declarado  | srid_declarado |    tipos_reales    | srids_reales | registros | nulas | vacias | invalidas 
+------------------------------+---------+-----------------+----------------+--------------------+--------------+-----------+-------+--------+-----------
+ calles                       | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |     35785 |     0 |      0 |         0
+ departamentos                | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |        17 |     0 |      0 |         0
+ lagunas                      | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |      3481 |     0 |      0 |         0
+ localidades                  | geom    | POINT           |           4326 | ST_Point           | 4326         |       161 |     0 |      0 |         0
+ provincia                    | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         1 |     0 |      0 |         0
+ r10_kmeans_centroides        | geom    | POINT           |           4326 | ST_Point           | 4326         |         3 |     0 |      0 |         0
+ r10_kmeans_salud             | geom    | POINT           |           4326 | ST_Point           | 4326         |        15 |     0 |      0 |         0
+ r10_mbr                      | geom    | POLYGON         |           4326 | ST_Polygon         | 4326         |         1 |     0 |      0 |         0
+ r11_calles_depto             | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |        17 |     0 |      0 |         0
+ r11_densidad_localidad       | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         8 |     0 |      0 |         0
+ r11_mancha_urbana            | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         8 |     0 |      0 |         0
+ r11_puentes                  | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |        75 |     0 |      0 |         0
+ r12_agricola_expuesta        | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |       127 |     0 |      0 |         0
+ r12_corredores               | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |         7 |     0 |      2 |         0
+ r12_suelo_lapaz              | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |       541 |     0 |      0 |         0
+ r13_derivacion_zonal         | geom    | POINT           |           4326 | ST_Point           | 4326         |        10 |     0 |      0 |         0
+ r13_impacto_crecida          | geom    | POINT           |           4326 | ST_Point           | 4326         |        10 |     0 |      0 |         0
+ r13_rutas_hospital           | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |        10 |     0 |      0 |         0
+ r13_tramos_cortados          | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |        77 |     0 |      0 |         0
+ r14_candidatos               | geom    | POLYGON         |           4326 | ST_Polygon         | 4326         |       727 |     0 |      0 |         0
+ r14_mejores                  | geom    | POINT           |           4326 | ST_Point           | 4326         |         3 |     0 |      0 |         0
+ r7_cursos_agua               | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |        36 |     0 |      0 |         0
+ r7_frontera                  | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |         4 |     0 |      0 |         0
+ r7_ranking_agua              | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |        17 |     0 |      0 |         0
+ r7_vecinos                   | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         4 |     0 |      0 |         0
+ r8_cobertura_5km             | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         1 |     0 |      0 |         0
+ r8_dist_localidad_salud      | geom    | POINT           |           4326 | ST_Point           | 4326         |        10 |     0 |      0 |         0
+ r8_localidades_sin_cobertura | geom    | POINT           |           4326 | ST_Point           | 4326         |         3 |     0 |      0 |         0
+ r8_rutas_lapaz               | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |         8 |     0 |      0 |         0
+ r8_salud_lapaz               | geom    | POINT           |           4326 | ST_Point           | 4326         |        15 |     0 |      0 |         0
+ r9_aislamiento               | geom    | POINT           |           4326 | ST_Point           | 4326         |        10 |     0 |      0 |         0
+ r9_conectores                | geom    | LINESTRING      |           4326 | ST_LineString      | 4326         |        10 |     0 |      0 |         0
+ r9_cruces_ruta_agua          | geom    | POINT           |           4326 | ST_Point           | 4326         |        83 |     0 |      0 |         0
+ r9_exposicion_deptos         | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |        17 |     0 |      0 |         0
+ r9_salud_expuesta            | geom    | POINT           |           4326 | ST_Point           | 4326         |        15 |     0 |      0 |         0
+ red_vial_vertices            | geom    | GEOMETRY        |              0 | ST_Point           | 5347         |     46437 |     0 |      0 |         0
+ rios                         | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |      8670 |     0 |      0 |         0
+ rios_area                    | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |       190 |     0 |      0 |         0
+ rutas                        | geom    | MULTILINESTRING |           4326 | ST_MultiLineString | 4326         |      3977 |     0 |      0 |         0
+ salud                        | geom    | POINT           |           4326 | ST_Point           | 4326         |       204 |     0 |      0 |         0
+ suelo                        | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |      4508 |     0 |      0 |         0
+ v_zrh_lapaz                  | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |         1 |     0 |      0 |         0
+ zona_riesgo_hidrico          | geom    | MULTIPOLYGON    |           4326 | ST_MultiPolygon    | 4326         |        17 |     0 |      0 |         0
+(43 filas)
+
+      nombre      |      tipo       | srid | valida | vertices 
+------------------+-----------------+------+--------+----------
+ Colón            | ST_MultiPolygon | 4326 | t      |     7436
+ Concordia        | ST_MultiPolygon | 4326 | t      |     7400
+ Diamante         | ST_MultiPolygon | 4326 | t      |     4508
+ Federación       | ST_MultiPolygon | 4326 | t      |     6102
+ Federal          | ST_MultiPolygon | 4326 | t      |    13784
+ Feliciano        | ST_MultiPolygon | 4326 | t      |     7352
+ Gualeguay        | ST_MultiPolygon | 4326 | t      |     4628
+ Gualeguaychú     | ST_MultiPolygon | 4326 | t      |     7963
+ Islas del Ibicuy | ST_MultiPolygon | 4326 | t      |     2524
+ La Paz           | ST_MultiPolygon | 4326 | t      |     8465
+ Nogoyá           | ST_MultiPolygon | 4326 | t      |     5377
+ Paraná           | ST_MultiPolygon | 4326 | t      |    10716
+ San Salvador     | ST_MultiPolygon | 4326 | t      |     4209
+ Tala             | ST_MultiPolygon | 4326 | t      |     5569
+ Uruguay          | ST_MultiPolygon | 4326 | t      |    11560
+ Victoria         | ST_MultiPolygon | 4326 | t      |     5002
+ Villaguay        | ST_MultiPolygon | 4326 | t      |    14972
+(17 filas)
+
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -60.849890510460085 -32.208315358289667
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -60.849884079009499 -31.952926395808586
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -58.999755074999996 -34.099924999999999
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -60.848905288001582 -32.032082553240386
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -60.849705005016617 -31.003285498521997
+psql:02_validaciones.sql:54: NOTICE:  Self-intersection at or near point -59.441082303575413 -30.100046026053292
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -60.081898529999997 -31.579362969999998
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -59.186976010000002 -32.502777690000002
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -58.798632779999998 -33.737735219999998
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -58.664942699999997 -30.69590956
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -59.510077340000002 -30.694347459999999
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -59.075989130000004 -33.42949394
+psql:02_validaciones.sql:54: NOTICE:  Ring Self-intersection at or near point -58.25489348 -30.92475129
+              fuente               | invalidas 
+-----------------------------------+-----------
+ ign_departamentos                 |         0
+ osm_multipolygons (natural=water) |         6
+ osm_multipolygons (salud)         |         0
+ inta_suelos                       |         7
+(4 filas)
+
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -60.849890510460085 -32.208315358289667
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -60.849884079009499 -31.952926395808586
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -58.999755074999996 -34.099924999999999
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -60.848905288001582 -32.032082553240386
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -60.849705005016617 -31.003285498521997
+psql:02_validaciones.sql:59: NOTICE:  Self-intersection at or near point -59.441082303575413 -30.100046026053292
+ osm_id | name |                         motivo                         
+--------+------+--------------------------------------------------------
+        |      | Self-intersection[-60.8498905104601 -32.2083153582897]
+        |      | Self-intersection[-60.8489052880016 -32.0320825532404]
+        |      | Self-intersection[-60.8497050050166 -31.003285498522]
+        |      | Self-intersection[-60.8498840790095 -31.9529263958086]
+        |      | Self-intersection[-59.4410823035754 -30.1000460260533]
+        |      | Self-intersection[-58.999755075 -34.099925]
+(6 filas)
+
+UPDATE 0
+UPDATE 0
+UPDATE 0
+ suma_deptos_km2 | provincia_km2 
+-----------------+---------------
+         78412.9 |       78412.9
+(1 fila)
+
+      nombre      | localidades | salud 
+------------------+-------------+-------
+ Colón            |          12 |    10
+ Concordia        |          14 |    15
+ Diamante         |          14 |    14
+ Federación       |           8 |     8
+ Federal          |           6 |     4
+ Feliciano        |           2 |     3
+ Gualeguay        |           5 |     6
+ Gualeguaychú     |          14 |    16
+ Islas del Ibicuy |           5 |     4
+ La Paz           |           9 |    15
+ Nogoyá           |           8 |     6
+ Paraná           |          29 |    54
+ San Salvador     |           2 |     3
+ Tala             |           7 |     7
+ Uruguay          |          14 |    23
+ Victoria         |           4 |    10
+ Villaguay        |           8 |     6
+(17 filas)
+
