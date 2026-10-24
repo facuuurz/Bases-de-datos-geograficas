@@ -1,23 +1,27 @@
-<p><b>Candidato #1 — RP6, entre Colonia Avigdor y Bovril (centro-este).</b> Es la opción de <b>equidad</b>. Cae en el sector del
-departamento sin ningún servicio de salud: hoy Colonia Avigdor no tiene establecimiento a menos de 5 km (punto 8.5), y por red vial su hospital
-más cercano está en <i>otro departamento</i> (Hospital Crispín Velázquez, Federal), a 36 minutos en crecida. Con el CASE quedaría a 14 minutos,
-y Bovril (8.790 hab., la segunda localidad del departamento) quedaría a 40 minutos por un camino que sigue habilitado durante la crecida.
-El sitio está sobre la propia RP6, fuera de la ZRH completa y de la principal, sin cuerpos de agua, sobre suelo agrícola-ganadero (unidad Viraró,
-IPC 22: no resta tierra agrícola de primera) y con un hexágono completo libre (1,46 km²). Es el de mayor puntaje (0,83) con una diferencia amplia sobre el resto.</p>
-<p><b>Candidato #2 — RP6, más al norte.</b> Es una variante del mismo corredor. Tiene menor beneficio, porque queda más lejos de Colonia Avigdor,
-y una pequeña parte de la celda dentro de la ZRH. Solo se justificaría si el sitio #1 no estuviera disponible (por ejemplo, por la titularidad de la tierra).</p>
-<p><b>Candidato #3 — RPA02, junto a El Quebracho (oeste).</b> Es la opción de <b>nodo logístico</b>: tiene el menor beneficio de equidad, porque las
-localidades cercanas ya tienen servicio, pero es el que alcanza más localidades en 45 minutos o menos en crecida (El Quebracho, Santa Elena,
-La Paz y San Gustavo, que suman más de 31.000 habitantes). Sería la ubicación adecuada para un <i>centro de distribución de medicamentos o
-base de ambulancias</i>, más que para un centro de atención.</p>
-<p><b>Conclusión.</b> Proponemos el <b>candidato #1 sobre la RP6</b> como ubicación del Centro de Atención Sanitaria de Emergencia. Cumple todas
-las condiciones excluyentes y es, entre las 787 celdas aptas, la que más mejora el acceso de <b>la población que hoy tiene la peor accesibilidad</b>. Además sigue siendo alcanzable cuando la crecida corta
-los vados y las planicies, que es justamente cuando se lo necesita. Coincide además con lo que mostraron los puntos anteriores: el centro-este es
-el hueco de la cobertura de 5 km (8.5), y el centroide K-means del grupo Bovril–Alcaraz (10.4) también cae en el campo, fuera de los pueblos,
-otra señal de que falta oferta <i>entre</i> localidades.
-Como mejora, el modelo podría incorporar la titularidad de la tierra, la cota del terreno (un MDE del IGN) y datos de población del INDEC
-por radio censal, para medir la demanda rural dispersa que hoy no está representada (solo se usan las localidades de OSM).</p>
-<p><b>Sensibilidad.</b> En una primera versión el beneficio se calculaba en escenario <i>normal</i> y contra cualquier establecimiento (incluso
-consultorios). El primer puesto caía entonces junto a un nodo «La Paz» de 500 habitantes que resultó ser un duplicado erróneo de OSM (punto 6). Al depurar
-ese dato y medir en escenario de crecida contra hospitales, el resultado se estabilizó en el corredor de la RP6. Esto muestra que la calidad del
-dato de entrada pesa tanto como el método.</p>
+<p>El <b>candidato #1</b> está sobre la RP6, entre Colonia Avigdor y Bovril, en el centro-este del departamento. Cae justo en el sector
+que hoy no tiene ningún servicio de salud: Colonia Avigdor no tiene establecimiento a menos de 5 km (punto 8.5) y, por red vial, su hospital
+más cercano está en <i>otro departamento</i> (el Hospital Crispín Velázquez, en Federal), a 36 minutos en crecida. Con el CASE ahí quedaría
+a 14 minutos, y Bovril (8.790 hab., la segunda localidad del departamento) a 40 minutos por un camino que sigue habilitado durante la
+crecida. El sitio está sobre la propia RP6, fuera de la ZRH completa y de la principal, sin cuerpos de agua, sobre suelo agrícola-ganadero
+(unidad Viraró, IPC 22, así que no resta tierra agrícola de primera) y con un hexágono completo libre (1,46 km²). Es el de mayor puntaje
+(0,83), con una diferencia amplia sobre el resto, y el que más mejora la situación de quienes hoy están peor.</p>
+<p>El <b>candidato #2</b> también está sobre la RP6, pero más al norte, así que en la práctica es una variante del mismo corredor. Tiene
+menor beneficio porque queda más lejos de Colonia Avigdor, y una pequeña parte de la celda cae dentro de la ZRH. Solo se justificaría si
+el sitio #1 no estuviera disponible, por ejemplo por la titularidad de la tierra.</p>
+<p>El <b>candidato #3</b> está sobre la RPA02, junto a El Quebracho, en el oeste. Es el que menos beneficio aporta a las localidades peor
+servidas, porque las de alrededor ya tienen servicio, pero es el que alcanza más localidades en 45 minutos o menos en crecida (El Quebracho,
+Santa Elena, La Paz y San Gustavo, que suman más de 31.000 habitantes). Por eso lo vemos más como ubicación para un centro de distribución
+de medicamentos o una base de ambulancias que para un centro de atención.</p>
+<p>Proponemos entonces el <b>candidato #1 sobre la RP6</b> como ubicación del Centro de Atención Sanitaria de Emergencia. Cumple todas las
+condiciones excluyentes y es, entre las 787 celdas aptas, la que más mejora el acceso de la población que hoy tiene la peor accesibilidad.
+Además sigue siendo alcanzable cuando la crecida corta los vados y las planicies, que es justamente cuando se lo necesita. El resultado
+coincide con lo que fueron mostrando los puntos anteriores: el centro-este es el hueco de la cobertura de 5 km (8.5), y el centroide
+K-means del grupo Bovril–Alcaraz (10.4) también cae en el campo, fuera de los pueblos, otra señal de que falta oferta <i>entre</i>
+localidades. Como mejora, el modelo podría incorporar la titularidad de la tierra, la cota del terreno (con un MDE del IGN) y datos de
+población del INDEC por radio censal, para representar la demanda rural dispersa que hoy no está en el análisis (solo se usan las
+localidades de OSM).</p>
+<p>Vale la pena contar cómo cambió el resultado durante el trabajo. En una primera versión el beneficio se calculaba en escenario
+<i>normal</i> y contra cualquier establecimiento, incluidos los consultorios. El primer puesto caía entonces junto a un nodo «La Paz» de
+500 habitantes que resultó ser un duplicado erróneo de OSM (punto 6). Al depurar ese dato y medir en escenario de crecida contra
+hospitales, el resultado se estabilizó en el corredor de la RP6. Eso nos dejó claro que la calidad del dato de entrada pesa tanto como
+el método.</p>
